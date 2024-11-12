@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      min-width: 320px;
+      height: 320px;
+      padding: 16px;
+      font-family: system-ui, -apple-system, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .content-wrapper {
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .input-group {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    /* Add media query for larger screens */
+    @media (min-height: 400px) {
+      body {
+        height: 100vh;
+      }
+
+      /* Create a wrapper to center everything together */
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+        max-width: 320px;
+      }
+
+      /* Wrap container and footer together */
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+    
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .logo {
+      width: 32px;
+      height: 32px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #1f2937;
+    }
+    
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+    }
+    
+    input {
+      padding: 8px 12px;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      font-size: 14px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    button {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.2s;
+      width: 100%;
+    }
+    
+    button:hover {
+      background: #2563eb;
+    }
+    
+    .status {
+      font-size: 14px;
+      height: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .success { color: #22c55e; }
+    .error { color: #ef4444; }
+
+    .footer {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 0.875rem;
+    }
+
+    .footer p {
+      color: #4b5563;
+    }
+
+    .footer a {
+      text-decoration: none;
+      color: #2563eb;
+      transition: color 0.2s;
+    }
+
+    .footer a:hover {
+      color: #1e40af;
+    }
+
+    .footer svg {
+      width: 14px;
+      height: 14px;
+      vertical-align: middle;
+      margin: 0 2px;
+      display: inline-block;
+    }
+
+    button.save-button {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background-color 0.2s;
+      width: 100%;
+    }
+
+    button.save-button:hover {
+      background: #2563eb;
+    }
+
+    button.save-button:disabled {
+      background: #93c5fd;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-wrapper">
+    <div class="container">
+      <div class="header">
+        <img src="icon.png" alt="Ad Away Logo" class="logo">
+        <h1 class="title">Ad Away</h1>
+      </div>
+      <div class="input-group">
+        <label for="apiKey">OpenAI API Key</label>
+        <input type="password" id="apiKey" placeholder="sk-...">
+      </div>
+      <button id="saveButton" class="save-button">Save API Key</button>
+      <div id="status" class="status"></div>
+    </div>
+    
+    <footer class="footer">
+      <p>
+        made with 
+        <svg class="inline" viewBox="0 0 122.88 107.39">
+          <path fill="#ed1b24" fill-rule="evenodd" d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+        </svg>
+        by <a href="https://rittik.io" target="_blank">rittik</a>
+      </p>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html> 
