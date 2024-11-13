@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Ad Away",
+  "name": "AdAway",
   "version": "1.0",
   "description": "Detect and skip sponsored sections in YouTube videos",
   "icons": {
